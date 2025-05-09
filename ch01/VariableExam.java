@@ -3,29 +3,21 @@ package ch01;
 public class VariableExam {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int mach ;
+		
+		int mach;
 		int distance;
 		mach = 340;
-		distance = mach * 60 * 60;
-		System.out.println("소리가 1시간 동안 가는 거리 : " + distance + "m");
+		distance = mach * 60 * 60; //음속 m/s 계산
 		
-		double radius ;
-		double area ;
-		radius = 10 ;
-		area=radius*radius*3.14;
-		System.out.println("반지름이 "+radius+"인 원의 넓이"+area);
+		System.out.println("소리가 한시간 동안 가는 거리: " + distance + "m");
 		
-		char firstName;
-		char midName;
-		char lastName;
-		firstName = '양';
-		midName = '지';
-		lastName = '민';
-		System.out.println(firstName);
-		System.out.println(midName);
-		System.out.println(lastName);
+		double radius, area;	//실수 타입 변수 선언
 		
+		radius = 10;			//초기값 정수 but 실수 타입으로 변환됨
+		area = radius * radius * 3.14;
+		
+		System.out.print("반지름이 " + radius + "인");
+		System.out.println(" 원의 넓이:" + area);
 	}
 
 }

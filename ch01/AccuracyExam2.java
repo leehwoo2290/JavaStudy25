@@ -3,17 +3,15 @@ package ch01;
 public class AccuracyExam2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
 		int apple = 1;
-		int totalPiceies = apple* 12;
-		int number = 8;
-		int temp = totalPiceies - number;
-		System.out.println(temp);
+		int totalPieces = apple * 10;
+		int number = 7;
+		int temp = totalPieces - number; // 계산한 조각수 * 10의 값
 		
-		double result = temp / 12.0;
+		double result = temp / 10.0;
+		
 		System.out.println(result);
-		
 	}
 
 }
