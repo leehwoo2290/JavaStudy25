@@ -9,22 +9,22 @@ public class LogcalAndExam {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¸é ´ë¼Ò¹®ÀÚ³ª ¼ıÀÚ¸¦ ÆÇ´ÜÇÕ´Ï´Ù: ");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œë©´ ëŒ€ì†Œë¬¸ìë‚˜ ìˆ«ìë¥¼ íŒë‹¨í•©ë‹ˆë‹¤: ");
 		
 		int charCode = input.nextInt();
 		
 		if((charCode>=65)&(charCode<=90)) {
-			System.out.println("ÀÔ·Â°ªÀº ´ë¹®ÀÚ ÀÔ´Ï´Ù :" +(char)charCode);
+			System.out.println("ì…ë ¥ê°’ì€ ëŒ€ë¬¸ì ì…ë‹ˆë‹¤ :" +(char)charCode);
 			
 			
 		}else if((charCode>=97)&&(charCode<=122)) {
-			System.out.println("ÀÔ·Â°ªÀº ¼Ò¹®ÀÚ ÀÔ´Ï´Ù :"+(char)charCode);
+			System.out.println("ì…ë ¥ê°’ì€ ì†Œë¬¸ì ì…ë‹ˆë‹¤ :"+(char)charCode);
 			
 		}else if(!(charCode < 48)&&!(charCode > 57)) {
-			System.out.println("ÀÔ·Â°ªÀÌ ¼ıÀÚÀÔ´Ï´Ù :"+(char)charCode);
+			System.out.println("ì…ë ¥ê°’ì´ ìˆ«ìì…ë‹ˆë‹¤ :"+(char)charCode);
 			
 		}else {
-			System.out.println("´ë¼Ò¹®ÀÚ³ª ¼ıÀÚ°¡ ¾Æ´Õ´Ï´Ù");
+			System.out.println("ëŒ€ì†Œë¬¸ìë‚˜ ìˆ«ìê°€ ì•„ë‹™ë‹ˆë‹¤");
 		}
 		
 	}

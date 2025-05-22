@@ -6,7 +6,7 @@ public class OverFlowExam {
 		// TODO Auto-generated method stub
 		int x = 1000000;
 		int y = 1000000;
-		int z = x*y; //-727379968 ¿À·ù °ª
+		int z = x*y; //-727379968 ì˜¤ë¥˜ ê°’
 		System.out.println(z);
 		
 		long x1 = 1000000;

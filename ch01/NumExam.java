@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class NumExam {
 
 	public static void main(String[] args) {
-		// Á¤¼ö È¦Â¦
+		// ì •ìˆ˜ í™€ì§
 		Scanner in = new Scanner(System.in);
 		
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä :");
-		int num = in.nextInt();//½ÇÇà¿¡¼­ °ıÈ£¿¡ ¼ıÀÚ ÀÔ·Â
-		System.out.println(num%2 ==0 ? "Â¦¼ö":"ÃP¼ö");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” :");
+		int num = in.nextInt();//ì‹¤í–‰ì—ì„œ ê´„í˜¸ì— ìˆ«ì ì…ë ¥
+		System.out.println(num%2 ==0 ? "ì§ìˆ˜":"í™“ìˆ˜");
 		
 
 	}

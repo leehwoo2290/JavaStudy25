@@ -4,9 +4,9 @@ public class FloatDoubleExam {
 
 	public static void main(String[] args) {
 		double var1 =3.14;
-		float var3 = 3.14F; //F¸¦ ºÙÈ÷Áö ¾ÊÀ¸¸é °è¼Ó ÀÌ¾îÁü
+		float var3 = 3.14F; //Fë¥¼ ë¶™íˆì§€ ì•Šìœ¼ë©´ ê³„ì† ì´ì–´ì§
 		
-		//Á¤¹Ğµµ Å×½ºÆ®
+		//ì •ë°€ë„ í…ŒìŠ¤íŠ¸
 		double var4 = 0.123456789123456789;
 		float var5 = 0.123456789123456789F;
 		
@@ -17,20 +17,20 @@ public class FloatDoubleExam {
 		
 		
 		byte byteValue = 10;
-		int intValue = byteValue ; // ÀÚµ¿Å¸ÀÔº¯È¯
-		System.out.println(intValue); //10ÀÌ Ãâ·Â
-		//byte bytevalue1 = intValue ; Å«Å¸ÀÔ¿¡¼­ ÀÛÀº Å¸ÀÔÀº ¿À·ù
+		int intValue = byteValue ; // ìë™íƒ€ì…ë³€í™˜
+		System.out.println(intValue); //10ì´ ì¶œë ¥
+		//byte bytevalue1 = intValue ; í°íƒ€ì…ì—ì„œ ì‘ì€ íƒ€ì…ì€ ì˜¤ë¥˜
 		
-		char charValue = '°¡';
+		char charValue = 'ê°€';
 		intValue = charValue ;
-		System.out.println("°¡ÀÇ À¯´ÏÄÚµå °ª = " + intValue);
+		System.out.println("ê°€ì˜ ìœ ë‹ˆì½”ë“œ ê°’ = " + intValue);
 		
 		intValue = 500;
 		long longValue = intValue ;
 		System.out.println(longValue);
 		
 		intValue = 200;
-		double doubleValue = intValue; // int(4)¸¦ Å« Å¸ÀÔÀÎ double(8)·Î º¯È¯
+		double doubleValue = intValue; // int(4)ë¥¼ í° íƒ€ì…ì¸ double(8)ë¡œ ë³€í™˜
 		System.out.println(doubleValue);
 		
 
