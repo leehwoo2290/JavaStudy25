@@ -8,6 +8,8 @@ public class Car {
 			public String company ;//제작회사(현대, 기아, 아우디 등등
 			public String model ;//아반떼, 그렌져, 쏘나타 등등
 			public String color ;//빨, 검, 은 등등
+			public String productionYear;
+			
 			public int maxSpeed = 1500;//최고 속도
 			public int minSpeed = 0;
 			public int minOil = 0;
@@ -57,6 +59,7 @@ public class Car {
 				System.out.println("현재 속도는 "+this.speed+"입니다");
 				System.out.println("현재 rpm은 "+this.rpm+"입니다");
 				System.out.println("현재 주유량은 "+this.oil+"입니다");
+				System.out.println("c");
 			}
 			
 			public void drive(Scanner input) {

@@ -22,6 +22,9 @@ public class CarExam {
 		System.out.print("색상 : ");
 		myCar.color = input.next();
 		
+		System.out.println("생상년도 : ");
+		myCar.productionYear = input.next();
+		
 		while (run) {
 			System.out.println("1. 차량 정보 확인");
 			System.out.println("2. 차량 시동 걸기");
