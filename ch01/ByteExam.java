@@ -6,9 +6,9 @@ public class ByteExam {
 		
 		byte var1 = 125;
 		int var2 =125;
-		for(int i =0 ; i<5; i++) { //º¯¼öi¸¦ 0~5±îÁö 1¾¿ Áõ°¡ÇÏ´Â ¹Ýº¹¹®
-			var1++; //byte 125¸¦ 1¾¿ Áõ°¡
-			var2++; //int 125¸¦ 1¾¿ Áõ°¡
+		for(int i =0 ; i<5; i++) { //ë³€ìˆ˜ië¥¼ 0~5ê¹Œì§€ 1ì”© ì¦ê°€í•˜ëŠ” ë°˜ë³µë¬¸
+			var1++; //byte 125ë¥¼ 1ì”© ì¦ê°€
+			var2++; //int 125ë¥¼ 1ì”© ì¦ê°€
 			System.out.println("var1 : " +var1 + "   var2 : " + var2);
 		}
 		
@@ -21,9 +21,9 @@ public class ByteExam {
 		}
 		
 		byte byteValue = 10;
-		int intValue = byteValue ; // ÀÚµ¿Å¸ÀÔº¯È¯
-		System.out.println(intValue); //10ÀÌ Ãâ·Â
-		//byte bytevalue1 = intValue ; Å«Å¸ÀÔ¿¡¼­ ÀÛÀº Å¸ÀÔÀº ¿À·ù
+		int intValue = byteValue ; // ìžë™íƒ€ìž…ë³€í™˜
+		System.out.println(intValue); //10ì´ ì¶œë ¥
+		//byte bytevalue1 = intValue ; í°íƒ€ìž…ì—ì„œ ìž‘ì€ íƒ€ìž…ì€ ì˜¤ë¥˜
 		
 	}
 

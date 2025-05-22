@@ -3,18 +3,21 @@ package ch01;
 public class AccuracyExam1 {
 
 	public static void main(String[] args) {
-		// 10/1 = 0.1
-		
+		// TODO Auto-generated method stub
 		int apple = 1;
 		double pieceUnit = 0.1;
-		int num = 7;
+		int number = 7;
 		
-		double result = apple - num * pieceUnit;
-		System.out.println(result);
+		System.out.println(number*pieceUnit);
 		
-		System.out.println(num * pieceUnit);
-		//Á¤È®ÇÑ °è»êÀ» À§ÇØ¼­´Â °¡±ŞÀû ½Ç¼öÅ¸ÀÔ »ç¿ë x
-
+		int totalPieces = apple *10;
+		int temp = totalPieces - number;
+		
+		double result = temp / 10.0;
+		
+		System.out.println("ì‚¬ê³¼ í•œê°œì—ì„œ");
+		System.out.println("0.7ì¡°ê°ì„ ë¹¼ë©´");
+		System.out.println(result +"ì¡°ê°ì´ ë‚¨ëŠ”ë‹¤");
 	}
 
 }

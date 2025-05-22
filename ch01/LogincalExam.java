@@ -12,34 +12,34 @@ public class LogincalExam {
 		String pwcaptcha = "0000";
 		Scanner input = new Scanner(System.in);
 		
-		System.out.print("·Î±×ÀÎ id¸¦ ÀÔ·ÂÇÏ¼¼¿ä :"	);
+		System.out.print("ë¡œê·¸ì¸ idë¥¼ ì…ë ¥í•˜ì„¸ìš” :"	);
 		String id = input.nextLine();
-		System.out.println("ÀÔ·ÂÇÏ½Å id´Â : " + id + "ÀÔ´Ï´Ù");
+		System.out.println("ì…ë ¥í•˜ì‹  idëŠ” : " + id + "ì…ë‹ˆë‹¤");
 		
-		System.out.print("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		String pw = input.nextLine();
-		System.out.println("==È®ÀÎ ÁßÀÔ´Ï´Ù==");
+		System.out.println("==í™•ì¸ ì¤‘ì…ë‹ˆë‹¤==");
 		
 		if( (loginid.equals(id)) & loginpw.equals(pw)) {
 			
-			System.out.println("id¿Í pw°¡ ÀÏÄ¡ÇÕ´Ï´Ù");
-			System.out.println("·Î±×ÀÎÀÌ µÇ¾ú½À´Ï´Ù");
+			System.out.println("idì™€ pwê°€ ì¼ì¹˜í•©ë‹ˆë‹¤");
+			System.out.println("ë¡œê·¸ì¸ì´ ë˜ì—ˆìŠµë‹ˆë‹¤");
 		}else {
-			System.out.println("id³ª pw°¡ ´Ù¸¨´Ï´Ù");
-			System.out.println("·Î±×ÀÎ ½ÇÆĞ");
+			System.out.println("idë‚˜ pwê°€ ë‹¤ë¦…ë‹ˆë‹¤");
+			System.out.println("ë¡œê·¸ì¸ ì‹¤íŒ¨");
 			
 		}
 		
-		System.out.print("º¸¾È¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä :");
+		System.out.print("ë³´ì•ˆë¬¸ìë¥¼ ì…ë ¥í•˜ì„¸ìš” :");
 		String captcha = input.nextLine();
-		System.out.println("==È®ÀÎ ÁßÀÔ´Ï´Ù==");
+		System.out.println("==í™•ì¸ ì¤‘ì…ë‹ˆë‹¤==");
 		
 		if( (loginid.equals(id)&loginpw.equals(pw))& pwcaptcha.equals(captcha)) {
 			
-			System.out.println("ÀÏÄ¡ÇÕ´Ï´Ù. ·Î±×ÀÎÀÌ µÇ¾ú½À´Ï´Ù");
+			System.out.println("ì¼ì¹˜í•©ë‹ˆë‹¤. ë¡œê·¸ì¸ì´ ë˜ì—ˆìŠµë‹ˆë‹¤");
 		
 		}else 
-			System.out.println("ºÒÀÏÄ¡ÇÕ´Ï´Ù.´Ù½Ã ÇØº¸½Ã±æ ¹Ù¶ø´Ï´Ù");
+			System.out.println("ë¶ˆì¼ì¹˜í•©ë‹ˆë‹¤.ë‹¤ì‹œ í•´ë³´ì‹œê¸¸ ë°”ëë‹ˆë‹¤");
 		}
 	}//25.05.08
 

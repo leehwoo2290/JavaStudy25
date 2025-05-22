@@ -3,25 +3,26 @@ package ch01;
 public class CheckOverFlowExam {
 
 	public static void main(String[] args) {
-		// ÀÔ·ÂÇÒ °ªÀ» »çÀü Á¦¾îÇÒ ÇÊ¿ä°¡ ÀÖÀ½
-		// main¸Ş¼­µå ÀÌ¿Ü¿¡ ¶Ç´Ù¸¥ ÇÔ¼ö ¸Ş¼­µå¸¦ Ãß°¡ÇÏ¿© »ç¿ë
+		
+			int result = safeAdd(70,80);
+			System.out.println(result);
+			
+			
+			
+		}
 
-		int result = SafeAdd(70, 20);
-		System.out.println(result);
-	}
 
-	public static int SafeAdd(int left, int right) {
-
-		if (right > 0) {
-			if (left > (Integer.MAX_VALUE - right)) {
-				// Integer.MAX_VALUE = intÃÖ´ñ°ª
-				throw new ArithmeticException("overflow");
+	private static int safeAdd(int left, int right) {
+		if(right>0) {
+			if(left>(Integer.MAX_VALUE - right)) {
+				throw new ArithmeticException("ì˜¤ë²„í”Œë¡œìš°ë°œìƒ");
 			}
-		} else {
-			if (left < (Integer.MIN_VALUE - right)) {
-				throw new ArithmeticException("d");
+		}else {
+			if(left<(Integer.MIN_VALUE - right)) {
+				throw new ArithmeticException("ì˜¤ë²„í”Œë¡œìš°ë°œìƒ");
 			}
 		}
-		return left + right;
+		return left + right ;
 	}
+
 }

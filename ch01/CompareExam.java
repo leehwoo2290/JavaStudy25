@@ -4,33 +4,38 @@ public class CompareExam {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int num1 = 15;
+		int num2 = 15;
 		
-		int num1 = 10;
-		int num2 = 10;
-		
-		boolean result1 = num1 == num2;	
+		boolean result1 = (num1 == num2);
 		System.out.println(result1);
 		
-		char char1 = '1';
-		char char2 =  1;
+		char char1 ='F';
+		char char2 = 'u';
 		
-		boolean result2 = char1 == char2;	
+		boolean result2 = (char1 <= char2);
 		System.out.println(result2);
 		
-		int v2 = 1;
-		double v3 = 1.0;
-		System.out.println(v2 == v3);
-		//ÇÇ¿¬»êÀÚ ´Ù¸¦¶§ ºñ±³ ÀÏ¾î³ª¸é ÀÚµ¿Å¸ÀÔ º¯°æ -> Å«°ªÀ¸·Î
+		int v1= 3;
+		double v2=3.0;
+		System.out.println(v1<v2);
 		
-		double V4 = 0.1;
-		float v5 = 0.1F;
-		System.out.println((float)V4 == v5);
-		System.out.println(V4 == (double)v5);
-		//System.out.println(V4 == v5);
-		//¼Ò¼öÁ¡Àº ºÎµ¿ ¼Ò¼öÁ¡À¸·Î ¿¬»ê
-		//true·Î ¸¸µé±â À§ÇØ¼± °­Á¦Å¸ÀÔº¯È¯ÀÌ ÇÊ¿ä
+		double v3 =1.8;
+		float v4=1.8F;
+		System.out.println(v3==v4);
 		
-		System.out.println((int)V4 * 10 == (int)v5 * 10);
+		System.out.println("==========");
+		System.out.println((float)v3==v4);
+		System.out.println(v3==(double)v4);
+		
+		System.out.println("----------");
+		System.out.println((int)v3*10 ==(int)v4*10);//ê´„í˜¸ë¥¼ ì•ˆ í•´ë„ 10-1ì´ëž‘ ê°™ìŒ
+		System.out.println(v3);
+		System.out.println(v4);
+		
+		
+		
+	
 	}
 
 }

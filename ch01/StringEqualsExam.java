@@ -3,17 +3,17 @@ package ch01;
 public class StringEqualsExam {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// string - ê°ì²´ë¥¼ ë§Œë“¤ê³  ì‚¬ìš©í•´ì•¼ í•˜ë©° í¸ì˜ë¥¼ ìœ„í•´ ìƒëµê°€ëŠ¥
 		
-		String str1 = "ÀÌÇö¿ì"; 
-		String str2 = "ÀÌÇö¿ì";
-		String str3 = new String("ÀÌÇö¿ì");
+		String strVal1 = "ì§€ë¯¼";
+		String strVal2 = "ë¯¼ì§€";
+		String strVal3 = new String("ì§€ë¯¼");
 		
-		//string ºñ±³ ¿¬»êÀº ÁÖ¼Ò°ªÀ» ºñ±³ÇÏ³×
-		System.out.println(str1 == str3);
-		System.out.println(str1.toString() + " " + str3.toString());
-		System.out.println(str1.equals(str3));
-		//°´Ã¼ºñ±³ ¼­¾ßÇÔ
+		System.out.println(strVal1 == strVal2);//ì•ˆì— ë©”ì„œë“œê°€ ë‹¤ë¥´ë©´ í‹€ë¦¬ë‹¤ ë‚˜ì˜´
+		System.out.println(strVal1 == strVal3);
+	
+		boolean eq1 = strVal1.equals(strVal3);
+		System.out.println(eq1);
 	}
 
 }

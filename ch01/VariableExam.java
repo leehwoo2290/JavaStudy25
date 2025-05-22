@@ -3,21 +3,30 @@ package ch01;
 public class VariableExam {
 
 	public static void main(String[] args) {
-		
-		int mach;
+		// TODO Auto-generated method stub
+		int mach ;
 		int distance;
 		mach = 340;
-		distance = mach * 60 * 60; //À½¼Ó m/s °è»ê
+		distance = mach * 60 * 60;
+		System.out.println("ì†Œë¦¬ê°€ 1ì‹œê°„ ë™ì•ˆ ê°€ëŠ” ê±°ë¦¬ : " + distance + "m");
 		
-		System.out.println("¼Ò¸®°¡ ÇÑ½Ã°£ µ¿¾È °¡´Â °Å¸®: " + distance + "m");
+		double radius ;
+		double area ;
+		radius = 10 ;
+		area=radius*radius*3.14;
+		System.out.println("ë°˜ì§€ë¦„ì´ "+radius+"ì¸ ì›ì˜ ë„“ì´"+area);
 		
-		double radius, area;	//½Ç¼ö Å¸ÀÔ º¯¼ö ¼±¾ğ
+		char firstName;
+		char midName;
+		char lastName;
+		firstName = 'ì–‘';
+		midName = 'ì§€';
+		lastName = 'ë¯¼';
+		System.out.println(firstName);
+		System.out.println(midName);
+		System.out.println(lastName);
 		
-		radius = 10;			//ÃÊ±â°ª Á¤¼ö but ½Ç¼ö Å¸ÀÔÀ¸·Î º¯È¯µÊ
-		area = radius * radius * 3.14;
-		
-		System.out.print("¹İÁö¸§ÀÌ " + radius + "ÀÎ");
-		System.out.println(" ¿øÀÇ ³ĞÀÌ:" + area);
 	}
 
 }
+

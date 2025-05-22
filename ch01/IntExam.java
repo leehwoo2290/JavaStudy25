@@ -14,11 +14,11 @@ public class IntExam {
 		System.out.println(var3);
 		System.out.println(var4);
 		
-		//longÅ¸ÀÔ
+		//longíƒ€ì…
 		
 		long var11 = 10;
 		long var12 = 20L;
-		long var13 = 1000000000000L; //LÀ» ºÙÈ÷Áö ¾ÊÀ¸¸é °è¼Ó 0ÀÌ ÀÌ¾îÁü. LÀ» ºÙ¿©¾ß Ã³¸®µÊ.
+		long var13 = 1000000000000L; //Lì„ ë¶™íˆì§€ ì•Šìœ¼ë©´ ê³„ì† 0ì´ ì´ì–´ì§. Lì„ ë¶™ì—¬ì•¼ ì²˜ë¦¬ë¨.
 		
 		System.out.println(var11);
 		System.out.println(var12);
@@ -29,13 +29,13 @@ public class IntExam {
 		
 		
 		byte byteValue = 10;
-		int intValue = byteValue ; // ÀÚµ¿Å¸ÀÔº¯È¯
-		System.out.println(intValue); //10ÀÌ Ãâ·Â
-		//byte bytevalue1 = intValue ; Å«Å¸ÀÔ¿¡¼­ ÀÛÀº Å¸ÀÔÀº ¿À·ù
+		int intValue = byteValue ; // ìë™íƒ€ì…ë³€í™˜
+		System.out.println(intValue); //10ì´ ì¶œë ¥
+		//byte bytevalue1 = intValue ; í°íƒ€ì…ì—ì„œ ì‘ì€ íƒ€ì…ì€ ì˜¤ë¥˜
 		
-		char charValue = '°¡';
+		char charValue = 'ê°€';
 		intValue = charValue ;
-		System.out.println("°¡ÀÇ À¯´ÏÄÚµå °ª = " + intValue);
+		System.out.println("ê°€ì˜ ìœ ë‹ˆì½”ë“œ ê°’ = " + intValue);
 		
 		intValue = 500;
 		long longValue = intValue ;

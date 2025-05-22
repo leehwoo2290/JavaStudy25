@@ -3,26 +3,27 @@ package ch01;
 public class PrintfExam {
 
 	public static void main(String[] args) {
-		// Ãâ·ÂÆ÷¸ä
+		// ì¶œë ¥í¬ë©§
 		
 		int i = 99;
 		String s = "cqx";
 		double f = 3.18f;
-		System.out.printf("%d\n", i);//10Áø¹ı
-		System.out.printf("%o\n",i);//8Áø¹ı
-		System.out.printf("%x\n", i);//16Áø¹ı
-		System.out.printf("%c\n",i);//charÇ¥
-		System.out.printf("%5d\n",i);//5Ä­Áß ¿À¸¥ÂÊ 2Ä­
-		System.out.printf("%05d\n",i);//5Ä­Áß ¿À¸¥ÂÊ 2Ä­ ¼ıÀÚ ±× ¿Ü 0
-		System.out.printf("%s\n",s);//¹®ÀÚ
-		System.out.printf("%5s\n",s);//5Ä­Áß ¹®ÀÚ
-		System.out.printf("%-5s\n",s);//¿ŞÂÊÀ¸·Î Á¤·ÄµÈ ¹®ÀÚ
-		System.out.printf("%f\n",f);//¼ıÀÚ
-		System.out.printf("%e\n",f);//¼ıÀÚ
-		System.out.printf("%4.1f\n",f);//4Ä­Áß ¼Ò¼öÁ¡ ÇÑ Ä­ ±× ¿Ü ¼ıÀÚ
-		System.out.printf("%04.1f\n",f);//¾Õ¿¡ 0ºÙÈ÷°í ¼Ò¼öÁ¡ ÇÑ Ä­ ±× ¿Ü ¼ıÀÚ
-		System.out.printf("%-4.1f\n",f);//¿ŞÂÊÀ¸·Î Á¤·ÄµÈ ¼ıÀÚ
+		System.out.printf("%d\n", i);//10ì§„ë²•
+		System.out.printf("%o\n",i);//8ì§„ë²•
+		System.out.printf("%x\n", i);//16ì§„ë²•
+		System.out.printf("%c\n",i);//charí‘œ
+		System.out.printf("%5d\n",i);//5ì¹¸ì¤‘ ì˜¤ë¥¸ìª½ 2ì¹¸
+		System.out.printf("%05d\n",i);//5ì¹¸ì¤‘ ì˜¤ë¥¸ìª½ 2ì¹¸ ìˆ«ì ê·¸ ì™¸ 0
+		System.out.printf("%s\n",s);//ë¬¸ì
+		System.out.printf("%5s\n",s);//5ì¹¸ì¤‘ ë¬¸ì
+		System.out.printf("%-5s\n",s);//ì™¼ìª½ìœ¼ë¡œ ì •ë ¬ëœ ë¬¸ì
+		System.out.printf("%f\n",f);//ìˆ«ì
+		System.out.printf("%e\n",f);//ìˆ«ì
+		System.out.printf("%4.1f\n",f);//4ì¹¸ì¤‘ ì†Œìˆ˜ì  í•œ ì¹¸ ê·¸ ì™¸ ìˆ«ì
+		System.out.printf("%04.1f\n",f);//ì•ì— 0ë¶™íˆê³  ì†Œìˆ˜ì  í•œ ì¹¸ ê·¸ ì™¸ ìˆ«ì
+		System.out.printf("%-4.1f\n",f);//ì™¼ìª½ìœ¼ë¡œ ì •ë ¬ëœ ìˆ«ì
 
 	}
 
 }//25.05.09
+

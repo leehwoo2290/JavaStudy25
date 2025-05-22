@@ -9,18 +9,19 @@ public class StringEqualExam2 {
 		
 		Scanner in = new Scanner(System.in);
 		
-		System.out.print("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 		String name = in.nextLine();
-		System.out.print("³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		String age = in.nextLine();
-		System.out.print("E-mailÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("E-mailì„ ì…ë ¥í•˜ì„¸ìš” : ");
 		String email = new String(in.nextLine());
 		
-		System.out.println("====È®ÀÎÁß====");
-		System.out.println(name + "´Ô ¾È³çÇÏ¼¼¿ä");
-		System.out.println(name +"´ÔÀÇ ³ªÀÌ´Â"+age+"ÀÔ´Ï´Ù");
-		System.out.println(name+"´ÔÀÇ E-mailÀº "+email+"ÀÔ´Ï´Ù");
-		System.out.println("º¸¾È¿¡ À¯ÀÇÇÏ½Ã±æ ¹Ù¶ø´Ï´Ù");
+		System.out.println("====í™•ì¸ì¤‘====");
+		System.out.println(name + "ë‹˜ ì•ˆë…•í•˜ì„¸ìš”");
+		System.out.println(name +"ë‹˜ì˜ ë‚˜ì´ëŠ”"+age+"ì…ë‹ˆë‹¤");
+		System.out.println(name+"ë‹˜ì˜ E-mailì€ "+email+"ì…ë‹ˆë‹¤");
+		System.out.println("ë³´ì•ˆì— ìœ ì˜í•˜ì‹œê¸¸ ë°”ëë‹ˆë‹¤");
 	}
 
 }//25.05.09
+

@@ -4,9 +4,9 @@ public class CharExam {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		char c1 = 75; //A¹®ÀÚ¸¦ Ãâ·ÂÇÏ±â À§ÇØ char¿¡ ´ëÀÔ
-		char c2 = 105; //10Áø¼ö 65¸¦ char¿¡ ´ëÀÔÇÏ¿© À¯´ÏÄÚµå
-		char c3 =109; //  /u¶ó´Â À¯´ÏÄÚµåÇ¥¿¡ ÀÖ´Â 16Áø¼ö 41¸¦ Ãâ·Â
+		char c1 = 75; //Aë¬¸ìë¥¼ ì¶œë ¥í•˜ê¸° ìœ„í•´ charì— ëŒ€ì…
+		char c2 = 105; //10ì§„ìˆ˜ 65ë¥¼ charì— ëŒ€ì…í•˜ì—¬ ìœ ë‹ˆì½”ë“œ
+		char c3 =109; //  /uë¼ëŠ” ìœ ë‹ˆì½”ë“œí‘œì— ìˆëŠ” 16ì§„ìˆ˜ 41ë¥¼ ì¶œë ¥
 		
 		char c4 = 75;
 		char c5 = 105 ;
@@ -20,7 +20,7 @@ public class CharExam {
 		System.out.println(c3);
 		
 		
-		char han1 = '°¡';
+		char han1 = 'ê°€';
 		char han2 = 44032;
 		char han3 = '\uac00';
 				
@@ -33,13 +33,13 @@ public class CharExam {
 		
 		
 		byte byteValue = 10;
-		int intValue = byteValue ; // ÀÚµ¿Å¸ÀÔº¯È¯
-		System.out.println(intValue); //10ÀÌ Ãâ·Â
-		//byte bytevalue1 = intValue ; Å«Å¸ÀÔ¿¡¼­ ÀÛÀº Å¸ÀÔÀº ¿À·ù
+		int intValue = byteValue ; // ìë™íƒ€ì…ë³€í™˜
+		System.out.println(intValue); //10ì´ ì¶œë ¥
+		//byte bytevalue1 = intValue ; í°íƒ€ì…ì—ì„œ ì‘ì€ íƒ€ì…ì€ ì˜¤ë¥˜
 		
-		char charValue = '°¡';
+		char charValue = 'ê°€';
 		intValue = charValue ;
-		System.out.println("°¡ÀÇ À¯´ÏÄÚµå °ª = " + intValue);
+		System.out.println("ê°€ì˜ ìœ ë‹ˆì½”ë“œ ê°’ = " + intValue);
 				
 
 	}
