@@ -7,7 +7,7 @@ import MarioCart.dto.MemberDTO;
 
 public class MemberService {
 
-	public void menu(Scanner input, ArrayList<MemberDTO> memberDTOs, MemberDTO loginState) {
+	public MemberDTO menu(Scanner input, ArrayList<MemberDTO> memberDTOs, MemberDTO loginState) {
 		
 			System.out.println("---------회원관리 메뉴에 진입 하였습니다.------");
 			boolean run = true;
@@ -25,10 +25,10 @@ public class MemberService {
 						loginState = loginAccount(input, memberDTOs, loginState);
 						break;
 					case "3":
-						modifyAccount(input, memberDTOs, loginState);
+						loginState = modifyAccount(input, memberDTOs, loginState);
 						break;
 					case "4":
-						deleteAccount(memberDTOs, loginState);
+						loginState = deleteAccount(memberDTOs, loginState);
 						break;					
 					case "5":
 						run = false;
@@ -37,6 +37,8 @@ public class MemberService {
 						throw new IllegalArgumentException("Unexpected value: " + select);
 				}	
 		}
+			
+			return loginState;
 	}
 
 	public boolean checkCreateAccout_Validation(ArrayList<MemberDTO> memberDTOs, String inputID, String inputNickName) {
@@ -92,6 +94,12 @@ public class MemberService {
 	
 	public MemberDTO loginAccount(Scanner input, ArrayList<MemberDTO> memberDTOs, MemberDTO loginState) {
 		
+		if(loginState != null) {
+			
+			System.out.println("이미 로그인 상태입니다.");
+			return loginState;
+		}
+
 		System.out.print("ID입력: ");
 		String id = input.next();
 		
@@ -105,7 +113,7 @@ public class MemberService {
 			if(memberDTO.getID().equals(id) && memberDTO.getPW().equals(pw)) {
 				
 				bLoginSuccess = true;
-				//call by ref
+			
 				loginState = memberDTO;
 				break;
 			}
@@ -118,29 +126,31 @@ public class MemberService {
 		return loginState;
 	}
 	
-	public void modifyAccount(Scanner input, ArrayList<MemberDTO> memberDTOs, MemberDTO loginState) {
+	public MemberDTO modifyAccount(Scanner input, ArrayList<MemberDTO> memberDTOs, MemberDTO loginState) {
 		
 		if(loginState == null) {
 			
 			System.out.println("비로그인 상태입니다.");
-			return;
+			return null;
 		}
 		MemberDTO modifyMemberDTO = inputAccoutInfo(input, memberDTOs);	
 		
-		memberDTOs.set(memberDTOs.indexOf(loginState), modifyMemberDTO);	
+		memberDTOs.set(memberDTOs.indexOf(loginState), modifyMemberDTO);
+		
+		return modifyMemberDTO;
 	}
 	
-	public void deleteAccount(ArrayList<MemberDTO> memberDTOs, MemberDTO loginState) {
+	public MemberDTO deleteAccount(ArrayList<MemberDTO> memberDTOs, MemberDTO loginState) {
 		
 		if(loginState == null) {
 			
 			System.out.println("비로그인 상태입니다.");
-			return;
+			return null;
 		}
-		memberDTOs.remove(loginState);
+		System.out.println(loginState.getNickName() + "님의 계정을 삭제했습니다.");
 		
-		//call by ref
-		loginState = null;
+		memberDTOs.remove(loginState);	
+		return null;
 	}
 
 }

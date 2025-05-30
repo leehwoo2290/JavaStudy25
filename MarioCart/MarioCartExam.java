@@ -3,8 +3,9 @@ package MarioCart;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import MarioCart.dto.CartDTO;
 import MarioCart.dto.MemberDTO;
-
+import MarioCart.service.CartService;
 import MarioCart.service.MemberService;
 
 public class MarioCartExam {
@@ -13,10 +14,14 @@ public class MarioCartExam {
 	
 	public static ArrayList<MemberDTO> memberDTOs = new ArrayList<MemberDTO>();
 	
+	public static ArrayList<CartDTO> cartDTOs = new ArrayList<CartDTO>();
+	
 	public static MemberDTO loginState; 
 	
 	static {
 		
+		cartDTOs.add(new CartDTO("세이버", 300, 7, 7, 8));
+		cartDTOs.add(new CartDTO("마라톤", 320, 6, 6, 7));
 	}
 	
 	public static void main(String[] args) {
@@ -33,9 +38,12 @@ public class MarioCartExam {
 			switch (select) {
 			case "1": 
 				MemberService memberService = new MemberService();
-				memberService.menu(input, memberDTOs, loginState);			
+				loginState = memberService.menu(input, memberDTOs, loginState);			
 				break;
-				
+			case "2": 
+				CartService cartService = new CartService();
+				cartService.menu(input, loginState, memberDTOs, cartDTOs);			
+				break;
 			case "4":
 				bRun = false;
 				break;

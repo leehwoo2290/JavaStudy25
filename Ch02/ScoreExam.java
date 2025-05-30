@@ -3,6 +3,7 @@ import java.util.LinkedHashMap;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Map.Entry;
+import java.util.Random;
 
 public class ScoreExam {
 	 
@@ -25,13 +26,13 @@ public class ScoreExam {
 	
 	
 	//프로그램 종료 단어와 입력 단어가 일치하는지 반환
-	public static boolean CheckProgramEnd(String _inputWord, String _programEndWord) {
+	public static boolean checkProgramEnd(String _inputWord, String _programEndWord) {
 		
 		//equalsIgnoreCase == 대소문자 구분 없이 string값 판단
 		return !_inputWord.equalsIgnoreCase(_programEndWord);
 	}
 	//과목 종류 추가 메서드
-	public static void AddSubject() {
+	public static void addSubject() {
 			
 		//경고 해결법은 close, but 함수 종료 전에 close사용 했으나 에러
 		Scanner input = new Scanner(System.in);	
@@ -50,7 +51,7 @@ public class ScoreExam {
 			
 			System.out.print("프로그램 종료 (end) || 프로그램 반복 (아무 문자): \n\n");
 			
-			bFlag = CheckProgramEnd(input.next(), "end");			
+			bFlag = checkProgramEnd(input.next(), "end");			
 		}
 		
 		//scanner 종료
@@ -58,7 +59,7 @@ public class ScoreExam {
 	}
 	
 	//학생 정보
-	public static void AddStudentInfo() {
+	public static void addStudentInfo() {
 		
 		//경고 해결법은 close, but 함수 종료 전에 close사용 했으나 에러
 		Scanner input = new Scanner(System.in);
@@ -92,7 +93,7 @@ public class ScoreExam {
 
 			System.out.println("프로그램 종료 (end) || 프로그램 반복 (아무 문자): \n\n");
 			
-			bFlag = CheckProgramEnd(input.next(), "end");	
+			bFlag = checkProgramEnd(input.next(), "end");	
 		}
 		
 		//scanner 종료
@@ -100,7 +101,7 @@ public class ScoreExam {
 	}
 		
 	//학생의 정보와 성적 추가 메서드
-	public static void AddStudentGrade(){
+	public static void addStudentGrade(){
 		
 		//경고 해결법은 close, but 함수 종료 전에 close사용 했으나 에러
 		Scanner input = new Scanner(System.in);
@@ -138,7 +139,7 @@ public class ScoreExam {
 	}
 	
 	
-	public static void PrintStudentInfoAndGrade() {
+	public static void printStudentInfoAndGrade() {
 		
 		int cnt = 0;
 
@@ -170,21 +171,49 @@ public class ScoreExam {
 		
 	}
 	
+	//인터페이스에 변수들 넣고 기존 로직이랑 랜검 케이스 로직 클래스분리하는거 생각하자
+	public static void createAutoTestCase() {
+		
+		RandomNicknameMaker randomNicknameMaker = new RandomNicknameMaker();
+		
+		Random random = new Random();
+		
+		int subjectsCnt = random.nextInt(5) + 4;
+		
+		for(int i = 0; i < subjectsCnt; i++) {
+			
+			//추후 구조 개선 필요 (타 클래스들 기능들 사용할 계획이 없었음 추후 수정)
+			//추후 addSubjects()와 기능 통합할 필요성 있음
+			String s = randomNicknameMaker.createRandomNickname(random.nextInt(3) + 1);
+			subjects.add(s);
+			System.out.println(s + " testcase");	
+		}
+		
+	}
+	
 	public static void main(String[] args) {
 		
+		createAutoTestCase();
 		//과목 종류 추가
-		AddSubject();
+		//addSubject();
 		
 		//학생 정보 추가
-		AddStudentInfo();
+		//addStudentInfo();
 		
 		//학생 성적 추가
-		AddStudentGrade();
+		//addStudentGrade();
 		
 		//출력
-		PrintStudentInfoAndGrade();
+		//printStudentInfoAndGrade();
 		
 		//기능추가? ex) 사용자가 원하는 특정 값에 따른 정렬 or 탐색, 잘못 입력된 데이터에 대한 반환 및 재입력
+		/*
+		 * 랜덤 테스트 케이스 추가 -> 이름 학번 점수 자동생성
+		 * 
+		 * 데이터 탐색 -> 학번 학교 이름에 따라서 평균 or 각 과목에 따른 성적 정렬
+		 * 
+		 * 스페이스 누르면 입력된 데이터 내의 정보와 비교하여 자동완성 보여주는거
+		 */
 	}
 
 }

@@ -6,6 +6,8 @@ public class MemberDTO {
 	private String pw  = null;
 	private String nickName  = null;
 	
+	private CartDTO cartDTO = null;
+	
 	public MemberDTO(String id, String pw, String nickName) {
 		
 		this.id = id;
@@ -26,5 +28,10 @@ public class MemberDTO {
 	public final String getNickName() {
 	
 		return nickName;
+	}
+	
+	public void setCartDTO(CartDTO cartDTO) {
+		
+		this.cartDTO = cartDTO;
 	}
 }
