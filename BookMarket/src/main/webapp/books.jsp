@@ -44,8 +44,6 @@
 		
 	<%@ include file="dbconn.jsp" %>
 
-	
-		
 		<div class="row align-items-md-stretch   text-center">
 	     	<%-- <%
 	     	p587에서 제외 jdbc사용으로 더미데이터 사용 종료

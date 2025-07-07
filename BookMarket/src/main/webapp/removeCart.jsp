@@ -1,7 +1,10 @@
-<%@ page contentType="text/html; charset=utf-8"%>
+<%@page import="dao.CartDAO"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Book"%>
 <%@ page import="dao.BookRepository"%>
+<%@ include file="dbconn.jsp" %>
+
 <%
 	String id = request.getParameter("id");
 	if (id == null || id.trim().equals("")) {
@@ -9,22 +12,37 @@
 		return;
 	}
 
-	BookRepository dao = BookRepository.getInstance();
+	/* BookRepository dao = BookRepository.getInstance();
 	
 	Book book = dao.getBookById(id);
 	if (book == null) {
 		response.sendRedirect("exceptionNoBookId.jsp");
 	}
+	
+	PreparedStatement pstmt = null;
+	try {
+		
+		String sql = "delete from cart where c_accountId=? and c_bookId=?";	
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, (String)session.getAttribute("sessionId"));
+		pstmt.setString(2, id);
+		pstmt.executeUpdate();
 
-	ArrayList<Book> cartList = (ArrayList<Book>) session.getAttribute("cartlist");
-	Book goodsQnt = new Book();
-	for (int i = 0; i < cartList.size(); i++) { // 상품리스트 하나씩 출력하기
-		goodsQnt = cartList.get(i);
-		if (goodsQnt.getBookId().equals(id)) {
-			cartList.remove(goodsQnt);
-		}
-	}
-
+	} catch (Exception ex) {
+		System.out.println("deleteBoard()  : " + ex);
+	} finally {
+		try {										
+			if (pstmt != null) 
+				pstmt.close();				
+			if (conn != null) 
+				conn.close();
+		} catch (Exception ex) {
+			throw new RuntimeException(ex.getMessage());
+		}		
+	} */
+	
+	CartDAO dao = CartDAO.getInstance();
+	dao.removeCart((String)session.getAttribute("sessionId"), id);
 	response.sendRedirect("cart.jsp");
 %>
 ml>

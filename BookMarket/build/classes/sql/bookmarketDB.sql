@@ -1,6 +1,19 @@
 
 USE BookMarketDB; --현재 사용자가 정의된 데베를 쓰겠다
 
+CREATE TABLE cart( 
+	c_accountId VARCHAR(10) NOT NULL,
+	c_bookId VARCHAR(10) NOT NULL,
+	c_unitPrice INTEGER NOT NULL,
+	c_bookName VARCHAR(20) NOT NULL,
+	c_unitTotalPrice  INTEGER NOT NULL,
+	c_amount INTEGER NOT NULL,
+	PRIMARY KEY (c_bookId)
+)default CHARSET=utf8;
+
+drop table cart;
+
+select * from cart;
 
 CREATE TABLE board( 
 	num INT NOT NULL AUTO_INCREMENT,

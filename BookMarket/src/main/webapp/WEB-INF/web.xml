@@ -83,6 +83,19 @@
 		<!-- http://192/168/111/101:8080/????.do 에대한 반응용 -->
 	</servlet-mapping>
 	
+	<servlet> <!-- 657p MVC중 C -->
+		<servlet-name>CartController</servlet-name>
+		<!-- 컨트롤러 이름 정의 -->
+		<servlet-class>mvc.controller.CartController</servlet-class>
+		<!-- java경로 설정 model담당 -->
+	</servlet>
+
+	<servlet-mapping> <!-- view담당 -->
+		<servlet-name>CartController</servlet-name>
+		<url-pattern>*.cart</url-pattern>
+		<!-- http://192/168/111/101:8080/????.do 에대한 반응용 -->
+	</servlet-mapping>
+	
   <display-name>BookMarket</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

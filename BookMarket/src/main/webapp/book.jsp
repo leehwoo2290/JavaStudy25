@@ -20,6 +20,12 @@
 <script type="text/javascript">
 /* 장바구니용 컨펌(예, 아니오) 추가 */
 	function addToCart() {
+		
+		if (${sessionId==null}) {
+			alert("로그인 해주세요.");
+			return false;
+		}
+		
 		if (confirm("상품을 장바구니에 추가하시겠습니까?")) {
 			document.addForm.submit();
 		} else {		
@@ -78,7 +84,9 @@
 				<p><b>재고수</b> : <%=book.getUnitsInStock()%>
 				<h4><%=book.getUnitPrice()%>원</h4>
 				<p>
-					<form name="addForm" action="./addCart.jsp?id=<%=book.getBookId()%>" method="post">
+					<form name="addForm" action= "./CartAddAction.cart?accountid=<%=sessionId%>&bookid=<%=book.getBookId()%>" method="post">
+					<%-- <form name="addForm" action="./processAddToCart.jsp?id=<%=book.getBookId()%>" method="post"> --%>
+					<%-- <form name="addForm" action="./addCart.jsp?id=<%=book.getBookId()%>" method="post"> --%>
 					<a href="#" class="btn btn-info" onclick="addToCart()"> 도서주문 &raquo;</a> 
 				    <a href="./cart.jsp" class="btn btn-warning"> 장바구니 &raquo;</a>				
 					<a href="./books.jsp" class="btn btn-secondary"> 도서목록 &raquo;</a>

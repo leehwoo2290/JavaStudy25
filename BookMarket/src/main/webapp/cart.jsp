@@ -26,7 +26,8 @@
 		<div class="row">
 			<table width="100%">
 				<tr>
-					<td align="left"><a href="./deleteCart.jsp?cartId=<%=cartId%>" class="btn btn-danger">삭제하기</a></td>
+					<%-- <td align="left"><a href="./deleteCart.jsp?cartId=<%=cartId%>" class="btn btn-danger">삭제하기</a></td> --%>
+					<td align="left"><a href="./CartDeleteAction.cart?accountid=<%=sessionId%>" class="btn btn-danger">삭제하기</a></td>
 					<td align="right"><a href="./shippingInfo.jsp?cartId=<%= cartId %>" class="btn btn-success">주문하기</a></td>
 				</tr>
 			</table>
@@ -40,8 +41,24 @@
 					<th>소계</th>
 					<th>비고</th>
 				</tr>
-				<%				
+				<%@ include file="dbconn.jsp" %>
+					
+				<%		
+					
+				    PreparedStatement pstmt = null;
+					ResultSet rs = null;
+								
+					String sql = "select * from cart where c_accountId = ?";				
+					pstmt = conn.prepareStatement(sql); //3단계	
+					
+					pstmt.setString(1, (String)session.getAttribute("sessionId"));
+					
+					rs = pstmt.executeQuery();
 					int sum = 0;
+					//4단계
+					while (rs.next()) {					//resultset 표에 1~마지막행까지 true반환		
+					sum = sum + rs.getInt("c_unitTotalPrice");
+					/* int sum = 0;
 					ArrayList<Book> cartList = (ArrayList<Book>) session.getAttribute("cartlist");
 					if (cartList == null)
 						cartList = new ArrayList<Book>();
@@ -49,14 +66,21 @@
 					for (int i = 0; i < cartList.size(); i++) { // 상품리스트 하나씩 출력하기
 						Book book = cartList.get(i);
 						int total = book.getUnitPrice() * book.getQuantity();
-						sum = sum + total;
+						sum = sum + total; */
 				%>
 				<tr>
-					<td><%=book.getBookId()%> - <%=book.getName()%></td>
+					<td class="nav-item"><a href="./book.jsp?id=<%=rs.getString("c_bookId")%>" class="nav-link" >
+					<%=rs.getString("c_bookId")%>-  <%=rs.getString("c_bookName")%></a></td>
+					<td><%=rs.getString("c_unitPrice")%></td>
+					<td><%=rs.getString("c_amount")%></td>
+					<td><%=rs.getString("c_unitTotalPrice")%></td>
+					<td><a href="./CartRemoveAction.cart?accountid=<%=sessionId%>&bookid=<%=rs.getString("c_bookId")%>" class="badge text-bg-danger">삭제</a></td>
+					<%-- <td><a href="./removeCart.jsp?id=<%=rs.getString("c_bookId")%>" class="badge text-bg-danger">삭제</a></td> --%>
+				<%--<td><%=book.getBookId()%> - <%=book.getName()%></td>
 					<td><%=book.getUnitPrice()%></td>
 					<td><%=book.getQuantity()%></td>
 					<td><%=total%></td>
-					<td><a href="./removeCart.jsp?id=<%=book.getBookId()%>" class="badge text-bg-danger">삭제</a></td>
+					<td><a href="./removeCart.jsp?id=<%=book.getBookId()%>" class="badge text-bg-danger">삭제</a></td> --%>
 				</tr>
 				<%
 					}
